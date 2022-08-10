@@ -14,7 +14,7 @@ struct SearchModel: Codable {
     let rank: Int?
     let localizedName: String?
     let country, administrativeArea: AdministrativeArea?
-
+    
     enum CodingKeys: String, CodingKey {
         case version = "Version"
         case key = "Key"
@@ -29,7 +29,7 @@ struct SearchModel: Codable {
 // MARK: - AdministrativeArea
 struct AdministrativeArea: Codable {
     let id, localizedName: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id = "ID"
         case localizedName = "LocalizedName"

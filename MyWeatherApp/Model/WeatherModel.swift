@@ -8,7 +8,7 @@ import Foundation
 struct WeatherModel: Codable {
     let headline: Headline?
     let dailyForecasts: [DailyForecast]?
-
+    
     enum CodingKeys: String, CodingKey {
         case headline = "Headline"
         case dailyForecasts = "DailyForecasts"
@@ -23,7 +23,7 @@ struct DailyForecast: Codable {
     let day, night: Day?
     let sources: [String]?
     let mobileLink, link: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case date = "Date"
         case epochDate = "EpochDate"
@@ -41,7 +41,7 @@ struct Day: Codable {
     let icon: Int?
     let iconPhrase: String?
     let hasPrecipitation: Bool?
-
+    
     enum CodingKeys: String, CodingKey {
         case icon = "Icon"
         case iconPhrase = "IconPhrase"
@@ -52,7 +52,7 @@ struct Day: Codable {
 // MARK: - Temperature
 struct Temperature: Codable {
     let minimum, maximum: Imum?
-
+    
     enum CodingKeys: String, CodingKey {
         case minimum = "Minimum"
         case maximum = "Maximum"
@@ -64,7 +64,7 @@ struct Imum: Codable {
     let value: Double?
     let unit: String?
     let unitType: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case value = "Value"
         case unit = "Unit"
@@ -79,7 +79,7 @@ struct Headline: Codable {
     let text, category, endDate: String?
     let endEpochDate: Int?
     let mobileLink, link: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case effectiveDate = "EffectiveDate"
         case effectiveEpochDate = "EffectiveEpochDate"

@@ -61,16 +61,16 @@ class WeatehrCell: UITableViewCell {
         }
     }
     func fill(dayOne: DailyForecast?) {
-            dayTemperatur.text = "\(dayOne?.temperature?.maximum?.value ?? 0)˚/ \(dayOne?.temperature?.minimum?.value ?? 0 )˚"
-            
-//          nightTempiratur.text = "\(dayOne?.temperature?.minimum?.value ?? 0 )C"
-            
-            let icom = dayOne?.day?.icon
-            
-            if (icom ?? 0) > 9 {
-                iconWeatehr.kf.setImage(with: URL(string: "https://developer.accuweather.com/sites/default/files/\((icom ?? 0))-s.png")!)
-            } else {
-                iconWeatehr.kf.setImage(with: URL(string: "https://developer.accuweather.com/sites/default/files/0\((icom ?? 0))-s.png")!)
-            }
+        dayTemperatur.text = "\(dayOne?.temperature?.maximum?.value ?? 0)˚/ \(dayOne?.temperature?.minimum?.value ?? 0 )˚"
+        
+        //          nightTempiratur.text = "\(dayOne?.temperature?.minimum?.value ?? 0 )C"
+        
+        let icom = dayOne?.day?.icon
+        
+        if (icom ?? 0) > 9 {
+            iconWeatehr.kf.setImage(with: URL(string: "https://developer.accuweather.com/sites/default/files/\((icom ?? 0))-s.png")!)
+        } else {
+            iconWeatehr.kf.setImage(with: URL(string: "https://developer.accuweather.com/sites/default/files/0\((icom ?? 0))-s.png")!)
         }
+    }
 }

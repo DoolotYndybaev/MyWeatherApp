@@ -49,7 +49,7 @@ class SearchController: UIViewController {
         return view
     }()
     private lazy var viewOnBackground = UIView()
-
+    
     private var models: [SearchModel]? = nil
     
     @objc func clickSearch(view: UIButton) {
@@ -89,7 +89,7 @@ class SearchController: UIViewController {
     
     override func viewDidLoad() {
         view.backgroundColor = UIColor(patternImage: UIImage(named: "Градиент")!)
-
+        
         view.addSubview(searchField)
         searchField.snp.makeConstraints { make in
             make.top.equalTo(view.safeArea.top).offset(10)
